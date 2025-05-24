@@ -2,13 +2,12 @@ package com.engsoft.mvc_demo.models;
 
 public class Musica {
 
-    String titulo, artista;
-    int duracao;
+    private String titulo;
+    private int duracaoEmSegundos;
 
-    public Musica(String artista, String titulo, int duracao) {
-        this.artista = artista;
-        this.duracao = duracao;
+    public Musica(String titulo, String artista_1, int duracaoEmSegundos) {
         this.titulo = titulo;
+        this.duracaoEmSegundos = duracaoEmSegundos;
     }
 
     public String getTitulo() {
@@ -19,20 +18,12 @@ public class Musica {
         this.titulo = titulo;
     }
 
-    public String getArtista() {
-        return artista;
+    public int getDuracaoEmSegundos() {
+        return duracaoEmSegundos;
     }
 
-    public void setArtista(String artista) {
-        this.artista = artista;
-    }
-
-    public int getDuracao() {
-        return duracao;
-    }
-
-    public void setDuracao(int duracao) {
-        this.duracao = duracao;
+    public void setDuracaoEmSegundos(int duracaoEmSegundos) {
+        this.duracaoEmSegundos = duracaoEmSegundos;
     }
 
 }

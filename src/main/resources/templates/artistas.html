@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${artista.nome}">Artista</title>
+    <style>
+        body { font-family: sans-serif; margin: 2rem; background: #fff; }
+        h1 { text-align: center; }
+        .musica {
+            border-bottom: 1px solid #ccc;
+            padding: 1rem;
+        }
+        .back {
+            display: block;
+            margin-bottom: 2rem;
+            text-align: center;
+            text-decoration: none;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <a href="/" class="back">← Voltar</a>
+    <h1 th:text="${artista.nome}">Nome do Artista</h1>
+    <div th:each="musica : ${artista.musicas}" class="musica">
+        <h2 th:text="${musica.titulo}">Título</h2>
+        <p><strong>Duração:</strong> <span th:text="${musica.duracaoEmSegundos}">0</span> segundos</p>
+    </div>
+</body>
+</html>
