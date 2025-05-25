@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${artista.nome}">Artista</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+
+<body>
+    <header class="header">
+        <a href="/artistas" class="back">Voltar</a>
+
+        <h1 th:text="${artista.nome}">Nome do Artista</h1>
+    </header>
+
+    <div class="main-container">
+        <img th:src="@{${artista.imagemUrl}}" alt="Imagem do artista" style="max-width: 300px;">
+        <h2>Músicas</h2>
+
+        <div class="listas">
+            <ul>
+                <li th:each="musica : ${artista.musicas}">
+                    <strong th:text="${musica.titulo}">Título</strong> –
+                    <span th:text="${musica.duracaoEmSegundos}">0</span> segundos
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

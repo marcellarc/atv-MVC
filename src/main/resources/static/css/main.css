@@ -1,13 +1,97 @@
+/* Reset básico */
 body {
     font-family: sans-serif;
     margin: 2rem;
     background: #f8f9fa;
+    color: #333;
 }
 
-h1 {
+/* Cabeçalho da página de artista */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 2rem 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.header .back {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: #e7f1ff;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.header .back:hover {
+    background-color: #cce4ff;
+}
+
+.header h1 {
+    font-size: 2rem;
+    margin: 1rem 0 0.5rem;
+    color: #333;
     text-align: center;
 }
 
+/* Container principal da página do artista */
+.main-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título */
+.main-container h2 {
+    font-size: 1.5rem;
+    margin: 1.5rem 0 1rem 0;
+}
+
+/* Lista de músicas */
+.listas ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.listas li {
+    background-color: #f1f3f5;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Texto da música */
+.listas li strong {
+    font-size: 1rem;
+}
+
+.listas li span {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Grid da página de artistas */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -15,88 +99,48 @@ h1 {
     margin-top: 2rem;
 }
 
+/* Cartões dos artistas */
 .card {
     background: white;
-
-    border-radius body {
-        font-family: sans-serif;
-        margin: 2rem;
-        background: #f8f9fa;
-    }
-
-    h1 {
-        text-align: center;
-    }
-
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-        gap: 1rem;
-        margin-top: 2rem;
-    }
-
-    .card {
-        background: white;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        transition: transform 0.2s;
-    }
-
-    .card:hover {
-        transform: scale(1.05);
-    }
-
-    .card img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-    }
-
-    .card h2 {
-        margin: 0.5rem;
-    }
-
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
-
+    border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.2s;
 }
 
-    .card:hover {
-        transform: scale(1.05);
-    }
+.card:hover {
+    transform: scale(1.05);
+}
 
-    .card img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-    }
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
 
-    .card h2 {
-        margin: 0.5rem;
-    }
+.card h2 {
+    margin: 0.5rem;
+}
 
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
+.principal {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
 
-    .musica {
-        border-bottom: 1px solid #ccc;
-        padding: 1rem;
-    }
+.principal h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
 
-    .back {
-        display: block;
-        margin-bottom: 2rem;
-        text-align: center;
-        text-decoration: none;
-        color: #007bff;
-    }
+/* Remover sublinhado de links */
+a {
+    text-decoration: none;
+    color: inherit;
+}

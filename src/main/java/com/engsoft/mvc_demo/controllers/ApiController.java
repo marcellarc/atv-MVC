@@ -17,46 +17,54 @@ public class ApiController {
     private List<Artista> artistas = new ArrayList<>();
 
     public ApiController() {
-        List<Musica> musicasArtista1 = new ArrayList<>();
-        musicasArtista1.add(new Musica("Stressed Out", "Twenty One Pilots", 202));
-        musicasArtista1.add(new Musica("Ride", "Twenty One Pilots", 214));
-        musicasArtista1.add(new Musica("Doubt", "Twenty One Pilots", 191));
-        musicasArtista1.add(new Musica("Heathens", "Twenty One Pilots", 195));
-        musicasArtista1.add(new Musica("The Line", "Twenty One Pilots", 192));
+        Artista top = new Artista("Twenty One Pilots", "/img/top.jpg", "artista1");
+        top.adicionarMusica(new Musica("Stressed Out", 202));
+        top.adicionarMusica(new Musica("Ride", 214));
+        top.adicionarMusica(new Musica("Doubt", 191));
+        top.adicionarMusica(new Musica("Heathens", 195));
+        top.adicionarMusica(new Musica("The Line", 192));
 
-        List<Musica> musicasArtista2 = new ArrayList<>();
-        musicasArtista2.add(new Musica("Chop Suey!", "System of a Down", 210));
-        musicasArtista2.add(new Musica("Toxicity", "System of a Down", 218));
-        musicasArtista2.add(new Musica("Aerials", "System of a Down", 235));
-        musicasArtista2.add(new Musica("Lonely Day", "System of a Down", 167));
-        musicasArtista2.add(new Musica("B.Y.O.B.", "System of a Down", 255));
+        Artista soad = new Artista("System of a Down", "/img/soad.jpg", "artista2");
+        soad.adicionarMusica(new Musica("Chop Suey!", 210));
+        soad.adicionarMusica(new Musica("Toxicity", 218));
+        soad.adicionarMusica(new Musica("Aerials", 235));
+        soad.adicionarMusica(new Musica("Lonely Day", 167));
+        soad.adicionarMusica(new Musica("B.Y.O.B.", 255));
 
-        List<Musica> musicasArtista3 = new ArrayList<>();
-        musicasArtista3.add(new Musica("King For A Day", "Pierce The Veil", 236));
-        musicasArtista3.add(new Musica("A Match Into Water", "Pierce The Veil", 212));
-        musicasArtista3.add(new Musica("Bulls In The Bronx", "Pierce The Veil", 267));
-        musicasArtista3.add(new Musica("Hell Above", "Pierce The Veil", 223));
-        musicasArtista3.add(new Musica("Caraphernelia", "Pierce The Veil", 268));
+        Artista ptv = new Artista("Pierce The Veil", "/img/ptv.jpg", "artista3");
+        ptv.adicionarMusica(new Musica("King For A Day", 236));
+        ptv.adicionarMusica(new Musica("A Match Into Water", 212));
+        ptv.adicionarMusica(new Musica("Bulls In The Bronx", 267));
+        ptv.adicionarMusica(new Musica("Hell Above", 223));
+        ptv.adicionarMusica(new Musica("Caraphernelia", 268));
 
-        List<Musica> musicasArtista4 = new ArrayList<>();
-        musicasArtista4.add(new Musica("Hard Times", "Paramore", 182));
-        musicasArtista4.add(new Musica("Still into You", "Paramore", 216));
-        musicasArtista4.add(new Musica("The Only Exception", "Paramore", 267));
-        musicasArtista4.add(new Musica("Misery Business", "Paramore", 211));
-        musicasArtista4.add(new Musica("Ain't It Fun", "Paramore", 296));
+        Artista paramore = new Artista("Paramore", "/img/para.png", "artista4");
+        paramore.adicionarMusica(new Musica("Hard Times", 182));
+        paramore.adicionarMusica(new Musica("Still into You", 216));
+        paramore.adicionarMusica(new Musica("The Only Exception", 267));
+        paramore.adicionarMusica(new Musica("Misery Business", 211));
+        paramore.adicionarMusica(new Musica("Ain't It Fun", 296));
 
-        List<Musica> musicasArtista5 = new ArrayList<>();
-        musicasArtista5.add(new Musica("Hail to the King", "Avenged Sevenfold", 305));
-        musicasArtista5.add(new Musica("Nightmare", "Avenged Sevenfold", 374));
-        musicasArtista5.add(new Musica("A Little Piece of Heaven", "Avenged Sevenfold", 480));
-        musicasArtista5.add(new Musica("Afterlife", "Avenged Sevenfold", 352));
-        musicasArtista5.add(new Musica("Dear God", "Avenged Sevenfold", 393));
+        Artista a7x = new Artista("Avenged Sevenfold", "/img/a7x.jpeg", "artista5");
+        a7x.adicionarMusica(new Musica("Hail to the King", 305));
+        a7x.adicionarMusica(new Musica("Nightmare", 374));
+        a7x.adicionarMusica(new Musica("A Little Piece of Heaven", 480));
+        a7x.adicionarMusica(new Musica("Afterlife", 352));
+        a7x.adicionarMusica(new Musica("Dear God", 393));
 
-        artistas.add(new Artista("Twenty One Pilots", "/images/artista1.jpg", "artista1"));
-        artistas.add(new Artista("System of a Down", "/images/artista2.jpg", "artista2"));
-        artistas.add(new Artista("Pierce The Veil", "/images/artista3.jpg", "artista3"));
-        artistas.add(new Artista("Paramore", "/images/artista4.png", "artista4"));
-        artistas.add(new Artista("Avenged Sevenfold", "/images/artista5.jpeg", "artista5"));
+        Artista bruno = new Artista("Bruno Mars", "/img/bruno.jpg", "artista6");
+        bruno.adicionarMusica(new Musica("Marry You", 300));
+        bruno.adicionarMusica(new Musica("Die With a Smile", 300));
+        bruno.adicionarMusica(new Musica("Grenade", 300));
+        bruno.adicionarMusica(new Musica("It Will Rain", 300));
+        bruno.adicionarMusica(new Musica("Just The Way You Are", 300));
+
+        artistas.add(top);
+        artistas.add(soad);
+        artistas.add(ptv);
+        artistas.add(paramore);
+        artistas.add(a7x);
+        artistas.add(bruno);
     }
 
     @GetMapping

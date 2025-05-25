@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" th:href="@{css/main.css}">
-    <title th:text="${artista.nome}">Artista</title>
-
+    <title>Artistas</title>
 </head>
+
 <body>
-    <a href="/" class="back">← Voltar</a>
-    <h1 th:text="${artista.nome}">Nome do Artista</h1>
-    <div th:each="musica : ${artista.musicas}" class="musica">
-        <a th:href="@{'/artista/' + ${artista.nome}}"></a>
-        <h2 th:text="${musica.titulo}">Título</h2>
-        <p><strong>Duração:</strong> <span th:text="${musica.duracaoEmSegundos}">0</span> segundos</p>
+    <div class="principal">
+        <h1>Artistas</h1>
+        <div class="grid">
+            <div class="card" th:each="artista : ${artistas}">
+                <a th:href="@{'/artistas/' + ${artista.pagina}}">
+                    <img th:src="${artista.imagemUrl}" alt="Artista">
+                    <h2 th:text="${artista.nome}">Nome</h2>
+                </a>
+            </div>
+        </div>
     </div>
 </body>
+
 </html>
