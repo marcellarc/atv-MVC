@@ -7,11 +7,12 @@ public class Artista {
     private String nome;
     private String imagemUrl;
     private List<Musica> musicas;
+    private String pagina;
 
-    public Artista(String nome, String imagemUrl, List<Musica> musicas) {
+    public Artista(String nome, String imagemUrl, String pagina) {
         this.nome = nome;
         this.imagemUrl = imagemUrl;
-        this.musicas = musicas;
+        this.pagina = pagina;
     }
 
     public String getNome() {
@@ -36,6 +37,14 @@ public class Artista {
 
     public void setMusicas(List<Musica> musicas) {
         this.musicas = musicas;
+    }
+
+    public String getPagina() {
+        return pagina;
+    }
+
+    public void setPagina(String pagina) {
+        this.pagina = pagina;
     }
 
 }
