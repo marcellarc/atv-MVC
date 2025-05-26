@@ -1,9 +1,16 @@
 /* Reset básico */
 body {
-    font-family: sans-serif;
+    font-family: Arial, sans-serif;
     margin: 2rem;
-    background: #f8f9fa;
-    color: #333;
+    background-color: #1c1c1c;
+    /* fundo escuro */
+    color: #f0f0f0;
+}
+
+/* Links em geral */
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Cabeçalho da página de artista */
@@ -11,36 +18,39 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #ffffff;
+    background-color: #2b2b2b;
     padding: 2rem 1rem;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     margin-bottom: 2rem;
     position: relative;
 }
 
+/* Link de voltar */
 .header .back {
     position: absolute;
     top: 1rem;
     left: 1rem;
     text-decoration: none;
-    color: #007bff;
+    color: #ff5555;
     font-weight: bold;
-    font-size: 1rem;
-    background-color: #e7f1ff;
+    background-color: #3a3a3a;
     padding: 0.4rem 0.8rem;
     border-radius: 5px;
     transition: background-color 0.2s ease;
 }
 
 .header .back:hover {
-    background-color: #cce4ff;
+    background-color: #4c4c4c;
 }
 
+/* Título do artista */
 .header h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin: 1rem 0 0.5rem;
-    color: #333;
+    color: #ff0000;
+    border-bottom: 2px solid #ff0000;
+    padding-bottom: 10px;
     text-align: center;
 }
 
@@ -48,16 +58,28 @@ body {
 .main-container {
     max-width: 800px;
     margin: 0 auto;
-    background-color: #ffffff;
+    background-color: #2b2b2b;
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Título */
+/* Imagem do artista */
+.main-container img,
+.foto-artista {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 4px solid #ff0000;
+    display: block;
+    margin-bottom: 30px;
+}
+
+/* Subtítulo */
 .main-container h2 {
     font-size: 1.5rem;
     margin: 1.5rem 0 1rem 0;
@@ -70,25 +92,54 @@ body {
     width: 100%;
 }
 
-.listas li {
-    background-color: #f1f3f5;
+.listas li,
+.musica {
+    background-color: #2b2b2b;
     padding: 1rem;
     margin-bottom: 0.75rem;
     border-radius: 8px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #ff0000;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: background-color 0.3s ease;
 }
 
-/* Texto da música */
-.listas li strong {
-    font-size: 1rem;
+.listas li:hover,
+.musica:hover {
+    background-color: #3a3a3a;
 }
 
-.listas li span {
+.listas li strong,
+.musica h2 {
+    font-size: 1.2rem;
+    color: #ff5555;
+    font-weight: bold;
+}
+
+.listas li span,
+.musica p {
     font-size: 0.95rem;
-    color: #555;
+    color: #cccccc;
+    font-style: italic;
+}
+
+/* Página de artistas - container principal */
+.principal {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    background-color: #2b2b2b;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Título da página principal */
+.principal h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #ff0000;
 }
 
 /* Grid da página de artistas */
@@ -101,46 +152,48 @@ body {
 
 /* Cartões dos artistas */
 .card {
-    background: white;
+    background-color: #2b2b2b;
+    border: 2px solid #ff0000;
+    padding: 15px;
     border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.2s;
+    transition: transform 0.3s ease, background-color 0.3s;
+    cursor: pointer;
 }
 
 .card:hover {
     transform: scale(1.05);
+    background-color: #3a3a3a;
 }
 
 .card img {
-    width: 100%;
-    height: 180px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ff0000;
+    margin-bottom: 10px;
 }
 
 .card h2 {
-    margin: 0.5rem;
+    color: #ff5555;
+    margin-top: 10px;
 }
 
-.principal {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-    text-align: center;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-}
+/* Responsivo */
+@media (max-width: 500px) {
+    .foto-artista {
+        width: 150px;
+        height: 150px;
+    }
 
-.principal h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    color: #333;
-}
+    .musica,
+    .listas li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-/* Remover sublinhado de links */
-a {
-    text-decoration: none;
-    color: inherit;
+    .grid {
+        grid-template-columns: 1fr;
+    }
 }
